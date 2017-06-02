@@ -2,8 +2,47 @@
 <head>
 	<title>Mars Rover Kata!</title>
 	<script type="text/javascript" src="rover.js"></script>
+	<style type="text/css">
+		body {
+			font-family: helvetica;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
+
+		.content {
+			margin: 10;
+		}
+
+		h1 {
+			font-size: 20px;
+		}
+
+		input[type="text"] {
+			display: block;
+			padding: 5px;
+			width: 300px;
+		}
+
+		button {
+			display: inline-block;
+			margin: 10px 0;
+		}
+	</style>
 </head>
 <body>
-
+	<div class="content">
+		<h1>Enter rover instructions:</h1>
+		<ul>
+			<li>forward &rarr; f</li>
+			<li>backward &rarr; b</li>
+			<li>left &rarr; l</li>
+			<li>right &rarr; r</li>
+		</ul>
+		<input id="instructions" type="text">
+		<button onclick="move();" type="button">Move rover</button>
+		<button onclick="reset();" type="button" >Reset rover</button>
+		<p id="position">New rover position: [0, 0], Direction: N</p>
+	</div>
 </body>
 </html>
